@@ -22,7 +22,7 @@
 	img,
 	svg {
 		display: block;
-		max-width: 100%;
+		width: 100%;
 		line-height: 0;
 		object-fit: cover;
 	}
