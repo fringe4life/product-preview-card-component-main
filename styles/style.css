@@ -117,7 +117,7 @@
 
 		/* sizes */
 		width: 100%;
-		padding: 1.125rem 0;
+		height: 3.125rem;
 
 		/* changes cart icon to white */
 		> img {
@@ -145,18 +145,25 @@
 		.card {
 			/* layout */
 			flex-direction: row;
-			max-height: 456px;
+			min-height: 456px;
 			/* sizes */
 			max-width: unset;
 
-			> * {
+			> .image-container {
 				max-width: 300px;
+			}
+			> .content-container {
+				/* why did i need to factor in margins with box-sizing set? */
+				max-width: 236px;
 			}
 		}
 
 		.image-container {
 			/* sizing */
-			height: 100%;
+			height: inherit;
+			& > img {
+				height: 100%;
+			}
 		}
 	}
 }
@@ -237,7 +244,7 @@
 	.fraunces {
 		font-family: "Fraunces", serif;
 	}
-
+	/* margins */
 	.margin-block-medium {
 		margin-block: 1.5rem;
 	}
@@ -250,8 +257,13 @@
 		margin-block: 2rem;
 	}
 
+	/* text decoration */
 	.strike-through {
 		text-decoration: line-through;
+	}
+	/* text transforms */
+	.uppercase {
+		text-transform: uppercase;
 	}
 
 	@media screen and (width >= 768px) {
