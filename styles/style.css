@@ -22,7 +22,7 @@
 	img,
 	svg {
 		display: block;
-		width: 100%;
+		max-width: 100%;
 		line-height: 0;
 		object-fit: cover;
 	}
@@ -54,6 +54,7 @@
 	h5,
 	h6 {
 		text-wrap: balance;
+		line-height: 1;
 	}
 }
 
@@ -90,6 +91,10 @@
 	.image-container {
 		height: 340px;
 		overflow: hidden;
+	}
+
+	.card-image {
+		width: 100%;
 	}
 
 	.content-container {
